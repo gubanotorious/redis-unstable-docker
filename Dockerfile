@@ -15,4 +15,4 @@ RUN cd /redis-unstable && make install
 EXPOSE 6379
 
 # Set the default command
-ENTRYPOINT ["/redis-unstable/src/redis-server","--protected-mode no","--appendonly yes","--tcp-backlog 128"]
+ENTRYPOINT ["/redis-unstable/src/redis-server","--protected-mode no","--appendonly yes","--appendfsync always","--tcp-backlog 128"]
